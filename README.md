@@ -7,29 +7,27 @@
 Step #1:Install ArgoCD 
 Just like other Kubernetes tools, ArgoCD requires a namespace with its name. Therefore, we will create a namespace for argocd.
 
-kubectl create ns argocd
+$kubectl create ns argocd
 
 ArgoCD can be installed using its manifests. First, you’ll need to download these manifests and apply them to your Minikube cluster.
 
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+$kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
 Step #2:Install Helm 
 
 Helm simplifies deploying and managing applications on Kubernetes. Let’s configure Helm and add the necessary repositories:
 
-Install Helm
-
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+$curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
 chmod 700 get_helm.sh
 ./get_helm.sh
 
-Add the official Helm repository:
+#Add the official Helm repository:
 
-helm repo add stable https://charts.helm.sh/stable
+$helm repo add stable https://charts.helm.sh/stable
 
-Update the Helm repositories:
+#Update the Helm repositories:
 
-helm repo update
+#helm repo update
 
 Step #3:Create Dockerfile for Go App
 
