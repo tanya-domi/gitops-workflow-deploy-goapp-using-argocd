@@ -1,1 +1,1 @@
-# gitops-workflow-deploy-goapp-minikube-using-argocd-settings-delete
+# gitops-workflow-deploy-goapp-using-argocd
