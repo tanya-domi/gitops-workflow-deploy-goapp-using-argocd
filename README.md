@@ -21,13 +21,13 @@ $curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scri
 chmod 700 get_helm.sh
 ./get_helm.sh
 
-#Add the official Helm repository:
+Add the official Helm repository:
 
 $helm repo add stable https://charts.helm.sh/stable
 
-#Update the Helm repositories:
+Update the Helm repositories:
 
-#helm repo update
+helm repo update
 
 Step #3:Create Dockerfile for Go App
 
